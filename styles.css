@@ -220,9 +220,11 @@ body{
 
 @media (min-width: 700px){
   body{
+    width: 100vw;
     height: 100vh;
   }
  .dash{
+  width: 100%;
   flex-direction: row;
   margin: auto;
  }
