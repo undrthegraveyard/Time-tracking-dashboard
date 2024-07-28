@@ -1,0 +1,289 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none; 
+}
+a {
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+/* Global Variables */
+:root{
+  /* Primary Colors */
+  --clr-light-red-work: hsl(15, 100%, 70%);
+  --clr-soft-blue-play: hsl(195, 74%, 62%);
+  --clr-light-red-study: hsl(348, 100%, 68%);
+  --clr-lime-green-exercise: hsl(145, 58%, 55%);
+  --clr-violet-social: hsl(264, 64%, 52%);
+  --clr-soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* Neutral Colors */
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  --clr-purple-background: hsl(246, 80%, 60%);
+
+  /* Font Family */
+  --ff-primary: 'Rubik', sans-serif;
+
+  /* Font Weight */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 500;
+
+  /* Font Size */
+  --fs-base: 18px;
+}
+
+/* Custom Styles */
+
+body{
+  font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+}
+.dash{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 1rem;
+  width: 100%;
+  height: auto;
+}
+/* First Part */
+.dash_bio-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: var(--clr-dark-blue);
+  width: 300px;
+}
+.dash_bio-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: var(--clr-purple-background);
+  color: white;
+  width: 100%;
+}
+.dash_bio-info img{
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--clr-pale-blue);
+}
+.dash_bio-info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dash_bio-info-subtext{
+  font-size: 0.8rem;
+  font-weight: var(--fw-light);
+}
+.dash_bio-info-name{
+  font-size: 1.5rem;
+  font-weight: var(--fw-light);
+}
+.dash_bio-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+.dash_bio-profile-button{
+  font-size: 1rem;
+  font-weight: var(--fw-normal);
+}
+.dash_bio-profile-button a{
+  color: var(--clr-pale-blue)
+}
+.dash_bio-profile-button:hover, .dash_bio-profile-button:focus{
+  color: white;
+}
+/* Second Part */
+.dash_activities-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.dash_activities-list1, .dash_activities-list2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.dash_activities-work, .dash_activities-play, .dash_activities-study, .dash_activities-exercise, .dash_activities-social, .dash_activities-self-care {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-radius: 1rem;
+  width: 300px;
+  height: 150px;
+  position: relative;
+}
+.dash_activities-work {
+  background-color: var(--clr-light-red-work);
+}
+.dash_activities-study {
+  background-color: var(--clr-light-red-study);
+}
+.dash_activities-play {
+  background-color: var(--clr-soft-blue-play);
+}
+.dash_activities-exercise {
+  background-color: var(--clr-lime-green-exercise);
+}
+.dash_activities-social {
+  background-color: var(--clr-violet-social);
+}
+.dash_activities-self-care {
+  background-color: var(--clr-soft-orange-self-care);
+}
+.dash_activities-foreground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--clr-dark-blue);
+  position: absolute;
+  z-index: +1;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.dash_activities-work-subhead, .dash_activities-play-subhead, .dash_activities-study-subhead, .dash_activities-exercise-subhead, .dash_activities-social-subhead, .dash_activities-self-care-subhead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dash_activities-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 700px){
+  body{
+    height: 100vh;
+  }
+ .dash{
+  flex-direction: row;
+  margin: auto;
+ }
+ .dash_bio-profile{
+  width: 250px;
+  border-radius: 1rem;
+ }
+ .dash_bio-info{
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 2rem 4rem 2rem;
+  border-radius: 1rem;
+ }
+ .dash_bio-info img{
+  width: 5rem;
+  height: 5rem;
+ }
+ .dash_bio-info-subtext{
+  font-weight: var(--fw-normal);
+  color: var(--clr-pale-blue);
+ }
+ .dash_bio-info-name{
+  font-size: 2.2rem;
+  font-weight: var(--fw-light);
+  color: white;
+ }
+ .dash_bio-options{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0 2rem 1.5rem 2rem;
+ }
+ .dash_bio-profile-button{
+  font-weight: var(--fw-normal);
+ }
+ .dash_activities-list1, .dash_activities-list2{
+  flex-direction: row;
+ }
+ .dash_activities-work, .dash_activities-play, .dash_activities-study, .dash_activities-exercise, .dash_activities-social, .dash_activities-self-care {
+  border-radius: 1rem;
+  width: 300px;
+  height: 220px;
+}
+.dash_activities-work h3, .dash_activities-play h3, .dash_activities-study h3, .dash_activities-exercise h3, .dash_activities-social h3, .dash_activities-self-care h3 {
+  font-weight: var(--fw-normal);
+}
+.dash_activities-foreground {
+  gap: 0.5rem;
+}
+.dash_activities-info {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.current{
+  font-size: 3rem;
+  font-weight: var(--fw-light);
+  color: white;
+}
+.previous{
+  font-size: 0.9rem;
+  font-weight: var(--fw-light);
+  color: var(--clr-pale-blue);
+}
+}
